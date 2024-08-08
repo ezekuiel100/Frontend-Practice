@@ -1,8 +1,9 @@
 POST http://localhost:3005/videos
 Content-Type: application/json
-
+ 
 {
-    "title": "video 2",
+    "title": "video node",
+    "description": "meu video",
     "duration": "100"
 } 
 
@@ -12,14 +13,15 @@ Content-Type: application/json
 GET http://localhost:3005/videos
 
 ###
-PUT http://localhost:3005/videos/905dbd03-ad84-42da-9991-2f658b560458
+PUT http://localhost:3005/videos/e87583f9-84fc-4d26-a1f5-a6c5b7b43935
 Content-Type: application/json
 
 {
     "title": "video xxxx",
+    "description": "updated",
     "duration": "340" 
 }
 
 ###
 
-DELETE  http://localhost:3005/videos/905dbd03-ad84-42da-9991-2f658b560458
+DELETE  http://localhost:3005/videos/eeaad523-10bb-4ef4-8d46-9eef27b81fdb
