@@ -48,4 +48,4 @@ fastify.delete("/videos/:id", async (request, reply) => {
   return reply.status(204).send();
 });
 
-fastify.listen({ port: 3005 });
+fastify.listen({ port: process.env.PORT ?? 3005 });
