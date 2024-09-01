@@ -20,5 +20,13 @@ export async function authenticate(
     return reply.status(400).send({ message: "User or password invalid!" });
   }
 
-  return reply.status(200).send();
+  const token = await reply.jwtSign(
+    {},
+    {
+      sign: {
+        sub: userEmail.id,
+      },
+    }
+  );
+  return reply.status(200).send({ token });
 }
